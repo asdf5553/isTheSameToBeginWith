@@ -1,6 +1,18 @@
-*.class
+public boolean isTheSameToBeginWith(String[] arr1, String[] arr2)
+  {
+   int intCounting = 0;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+   for(int k = 0; k < arr1.length; k++)
+   {
+      String temp1 = arr1[k];
+      String temp2 = arr2[k];
+      int hi = temp1.indexOf(temp2);
+
+      if(hi == 0)
+         intCounting++;              
+   }
+   if(intCounting == arr1.length)
+      return true;
+   else
+      return false;
+}
